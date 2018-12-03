@@ -131,9 +131,9 @@
               if ($(this).html() !== ''){
                 bodyMarkup += '<tr class="' + tr_class +'">';
                 if ($topRow.find('>td,>th').eq(cellIndex).html()){
-                  bodyMarkup += '<td class="st-key">'+$topRow.find('>td,>th').eq(cellIndex).html()+'</td>';
+                  bodyMarkup += '<td class="st-key '+$(this).prop('class')+'">'+$topRow.find('>td,>th').eq(cellIndex).html()+'</td>';
                 } else {
-                  bodyMarkup += '<td class="st-key"></td>';
+                  bodyMarkup += '<td class="st-key '+$(this).prop('class')+'"></td>';
                 }
                 bodyMarkup += '<td class="st-val '+$(this).prop('class')  +'">'+$(this).html()+'</td>';
                 bodyMarkup += '</tr>';
